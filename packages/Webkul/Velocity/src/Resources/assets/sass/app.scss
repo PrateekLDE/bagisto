@@ -24,6 +24,8 @@
 @import 'components/media';
 @import 'components/rtl';
 @import 'components/datagrid';
+@import 'theme';
+
 
 /* static */
 @import 'static/material-icons';
@@ -775,7 +777,7 @@ header {
     }
 
     .secondary-navbar {
-        background-color: #4d7ea8;
+        background-color: rgb(17,73,85);
         min-height: 40px;
         padding: 5px;
         vertical-align: middle;

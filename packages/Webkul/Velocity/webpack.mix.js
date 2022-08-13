@@ -1,6 +1,5 @@
 const path = require('path');
 const mix = require('laravel-mix');
-const colors = require('colors');
 
 require('laravel-mix-merge-manifest');
 require('laravel-mix-clean');
@@ -16,8 +15,6 @@ const devPublicPath = path.join(
     'assets'
 );
 const publicPath = mix.inProduction() ? prodPublicPath : devPublicPath;
-
-console.log(colors.bold.blue(`Assets will be published in: ${publicPath}`));
 
 const assetsPath = path.join(__dirname, 'src', 'Resources', 'assets');
 const jsPath = path.join(assetsPath, 'js');

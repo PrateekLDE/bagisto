@@ -19,63 +19,39 @@
         @endphp
 
         <div class="container-fluid advertisement-three-container">
-            <div class="row">
-                @if ( isset($advertisementThree[0]))
+            <div class="row col-12">
+                <div class="col-lg-6 col-md-12 second-panel">
+                    <h6>
+                        Let me start by introducing myself my name is Daksh Kakkar, I’m a psychic medium ,which simply means I am able to deliver messages from spirit to you, it could be a departed loved one, a pet friend you lost or it could be a general guidance, whatever your pick I am here for you on this journey.
+                        <br><br>
+
+                        And let me clear your reservations right here, as opposed to what movies depict spirit is all around us, guiding us, taking care of us and sending us messages of love. Everything is energy and just like we can’t see magnetic field but birds can, I can see and hear spirit (Clairvoyant and Clairaudience) even though you may not be able to, but that’s where my gifts and skills are put to service.
+                        <br><br>
+
+                        My own journey with spirit started just as when I was learning my a, b, c s in form of friends who my family thought out to be imaginary friends. They took care of me as a shy and awkward kid and made me familiar to the world which I whole heartly love and respect now.
+                        <br><br>
+
+                        I’ve always had a keen interest in occult sciences wherein I learnt intuitively how to read tarot, graphology, reiki, spells, rituals and much more.
+                        <br><br>
+
+                        And now with deep mediation, a lot of practice and blessing of Maa Kali I’m able to hone the skill I was born with that able to deliver messages directly from your loved ones.
+                        <br><br>
+
+                        With me you are always in safe hands
+                        <br><br>
+                        See you on the other side
+                    </h6>
+                </div>
+
+                <!-- @if ( isset($advertisementThree[0])) -->
                     <a @if (isset($one)) href="{{ $one }}" @endif class="col-lg-6 col-md-12 no-padding">
                         <img
                             class="full-width {{ $isLazyLoad ? 'lazyload' : '' }}"
                             @if (! $isLazyLoad) src="{{ Storage::url($advertisementThree[0]) }}" @endif
                             data-src="{{ Storage::url($advertisementThree[0]) }}" alt="" />
                     </a>
-                @endif
-
-                <div class="col-lg-6 col-md-12 second-panel">
-                    @if ( isset($advertisementThree[1]))
-                        <a @if (isset($two)) href="{{ $two }}" @endif class="row top-container">
-                            <img
-                                class="col-12 pr0 {{ $isLazyLoad ? 'lazyload' : '' }}"
-                                @if (! $isLazyLoad) src="{{ Storage::url($advertisementThree[1]) }}" @endif
-                                data-src="{{ Storage::url($advertisementThree[1]) }}" alt="" />
-                        </a>
-                    @endif
-                    @if ( isset($advertisementThree[2]))
-                        <a @if (isset($three)) href="{{ $three }}" @endif class="row bottom-container">
-                            <img
-                                class="col-12 pr0 {{ $isLazyLoad ? 'lazyload' : '' }}"
-                                @if (! $isLazyLoad) src="{{ Storage::url($advertisementThree[2]) }}" @endif
-                                data-src="{{ Storage::url($advertisementThree[2]) }}" alt="" />
-                        </a>
-                    @endif
-                </div>
+                <!-- @endif -->
             </div>
         </div>
     @endif
-@endif
-
-@if (! $isRendered)
-    <div class="container-fluid advertisement-three-container">
-        <div class="row">
-            <a @if (isset($one)) href="{{ $one }}" @endif class="col-lg-6 col-md-12 no-padding">
-                <img
-                    class="full-width {{ $isLazyLoad ? 'lazyload' : '' }}"
-                    @if (! $isLazyLoad) src="{{ asset('/themes/velocity/assets/images/headphones.webp') }}" @endif
-                    data-src="{{ asset('/themes/velocity/assets/images/headphones.webp') }}" alt="" />
-            </a>
-
-            <div class="col-lg-6 col-md-12 second-panel">
-                <a @if (isset($two)) href="{{ $two }}" @endif class="row top-container">
-                    <img
-                        class="col-12 pr0 {{ $isLazyLoad ? 'lazyload' : '' }}"
-                        @if (! $isLazyLoad) src="{{ asset('/themes/velocity/assets/images/watch.webp') }}" @endif
-                        data-src="{{ asset('/themes/velocity/assets/images/watch.webp') }}" alt="" />
-                </a>
-                <a @if (isset($three)) href="{{ $three }}" @endif class="row bottom-container">
-                    <img
-                        class="col-12 pr0 {{ $isLazyLoad ? 'lazyload' : '' }}"
-                        @if (! $isLazyLoad) src="{{ asset('/themes/velocity/assets/images/kids-2.webp') }}" @endif
-                        data-src="{{ asset('/themes/velocity/assets/images/kids-2.webp') }}" alt="" />
-                </a>
-            </div>
-        </div>
-    </div>
 @endif

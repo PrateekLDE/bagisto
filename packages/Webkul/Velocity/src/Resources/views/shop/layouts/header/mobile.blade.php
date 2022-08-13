@@ -3,7 +3,7 @@
     $cartItemsCount = $cart ? $cart->items->count() : trans('shop::app.minicart.zero');
 @endphp
 
-<mobile-header
+<!-- <mobile-header
     is-customer="{{ auth()->guard('customer')->check() ? 'true' : 'false' }}"
     heading= "{{ __('velocity::app.menu-navbar.text-category') }}"
     :header-content="{{ json_encode(app('Webkul\Velocity\Repositories\ContentRepository')->getAllContents()) }}"
@@ -14,7 +14,7 @@
     :all-locales="{{ json_encode(core()->getCurrentChannel()->locales()->orderBy('name')->get()) }}"
     :currency="{{ json_encode(core()->getCurrentCurrency()) }}"
     :all-currencies="{{ json_encode(core()->getCurrentChannel()->currencies) }}"
->
+> -->
 
     {{-- this is default content if js is not loaded --}}
     <div class="row">

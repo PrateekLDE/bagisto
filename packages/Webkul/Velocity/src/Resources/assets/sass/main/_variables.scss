@@ -7,8 +7,8 @@
 |
 */
 /* theme colors */
-$theme-color: #26A37C;
-$theme-dark-color: #247959;
+$theme-color: rgb(17,73,85); //rgb(49,79,139)
+$theme-dark-color: rgb(17,73,85);
 
 /* background colors */
 $light-background: #F7F7F9;
@@ -31,7 +31,7 @@ $border-light: #ECECEC;
 $border-primary: #269c77;
 
 /* link colors */
-$link-color: #4D7EA8;
+$link-color: rgb(17,73,85);
 $light-link-color: #28557B;
 
 /* remaining colors */

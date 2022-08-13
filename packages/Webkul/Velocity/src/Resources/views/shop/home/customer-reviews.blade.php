@@ -1,82 +1,104 @@
-@php
-    $reviews = app('Webkul\Velocity\Helpers\Helper')->getShopRecentReviews(4);
-    $reviewCount = count($reviews);
-@endphp
-
-<div class="container-fluid reviews-container">
-    @if ($reviewCount)
-        <card-list-header
-            heading="{{ __('velocity::app.home.customer-reviews') }}"
-        ></card-list-header>
-
-        <div class="row">
-            @foreach ($reviews as $key => $review)
-                <div class="col-lg-3 col-md-12 review-wrapper">
-                    <div class="card no-padding">
-                        <div class="review-info">
-                            <div class="customer-info">
-                                <div class="align-vertical-top">
-                                    <span class="customer-name fs20 display-inbl">
-                                        {{ strtoupper(substr( $review['name'], 0, 1 )) }}
-                                    </span>
-                                </div>
-
-                                <div>
-                                    <h3 class="fs20 fw6 no-margin display-block">
-                                        {{ $review['name'] }}
-                                    </h3>
-
-                                    <div class="product-info fs16">
-                                        <span>{{ __('velocity::app.products.reviewed') }}- <a class="remove-decoration link-color" href="{{ route('shop.productOrCategory.index', $review->product->url_key) }}">{{$review->product->name}}</a></span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="star-ratings fs16">
-                                <star-ratings :ratings="{{ $review['rating'] }}"></star-ratings>
-                            </div>
-
-                            <div class="review-description">
-                                <p class="review-content fs16">{{ $review['comment'] }}</p>
-                            </div>
-                        </div>
-                    </div>
+<main>
+  <section>
+    <div class="testimonial">
+      <div class="container">
+       <div class="testimonial__inner">
+         <div class="testimonial-slider">
+           <div class="testimonial-slide">
+             <div class="testimonial_box">
+               <div class="testimonial_box-inner">
+                 <div class="testimonial_box-top">
+                   <div class="testimonial_box-icon">
+                     <i class="fas fa-quote-right"></i>
+                   </div>
+                   <div class="testimonial_box-text">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                   </div>
+                   <div class="testimonial_box-img">
+                    <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                  </div>
+                  <div class="testimonial_box-name">
+                    <h4>John Doe</h4>
+                 </div>
+                 <div class="testimonial_box-job">
+                   <p>MANAGER</p>
+                 </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <div class="testimonial-slide">
+            <div class="testimonial_box">
+              <div class="testimonial_box-inner">
+                <div class="testimonial_box-top">
+                  <div class="testimonial_box-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial_box-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                  </div>
+                  <div class="testimonial_box-img">
+                   <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                 </div>
+                 <div class="testimonial_box-name">
+                   <h4>John Doe</h4>
                 </div>
-            @endforeach
-        </div>
-    @endif
-</div>
-
-@push('scripts')
-    <script type="text/javascript">
-        (() => {
-            $('.carousel-showmanymoveone .item').each(() => {
-                var itemToClone = $(this);
-                var i;
-                for (i = 1; i < 4; i++ ) {
-                    itemToClone = itemToClone.next();
-
-                    // wrap around if at end of item collection
-                    if (!itemToClone.length) {
-                        itemToClone = $(this).siblings(':first');
-                    }
-
-                    // grab item, clone, add marker class, add to collection
-                    itemToClone.children(':first-child').clone()
-                        .addClass("cloneditem-"+(i))
-                        .appendTo($(this));
-                }
-            });
-
-            $(document).on('click', '.rango-arrow-left', () => {
-                $('.prev-slider').click();
-            });
-
-            $(document).on('click', '.rango-arrow-right', () => {
-                $('.next-slider').click();
-            });
-
-        })();
-    </script>
-
-@endpush
+                <div class="testimonial_box-job">
+                  <p>CEO</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial_box">
+              <div class="testimonial_box-inner">
+                <div class="testimonial_box-top">
+                  <div class="testimonial_box-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial_box-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                  </div>
+                  <div class="testimonial_box-img">
+                   <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                 </div>
+                 <div class="testimonial_box-name">
+                   <h4>John Doe</h4>
+                </div>
+                <div class="testimonial_box-job">
+                  <p>Co-Founder</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial_box">
+              <div class="testimonial_box-inner">
+                <div class="testimonial_box-top">
+                  <div class="testimonial_box-icon">
+                    <i class="fas fa-quote-right"></i>
+                  </div>
+                  <div class="testimonial_box-text">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus optio facilis beatae.</p>
+                  </div>
+                  <div class="testimonial_box-img">
+                   <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                 </div>
+                 <div class="testimonial_box-name">
+                   <h4>John Doe</h4>
+                </div>
+                <div class="testimonial_box-job">
+                  <p>SEO</p>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+      </div>
+    </div>
+  </section>
+</main>

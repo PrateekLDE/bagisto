@@ -12,7 +12,6 @@
 
                 <div class="col-lg-7 col-md-12 vc-full-screen">
                     <div class="left-wrapper">
-
                         {!! view_render_event('bagisto.shop.layout.header.wishlist.before') !!}
 
                             @include('velocity::shop.layouts.particals.wishlist', ['isText' => true])
@@ -31,6 +30,10 @@
 
                         {!! view_render_event('bagisto.shop.layout.header.cart-item.after') !!}
                     </div>
+
+                    <div style="float: right; margin-top: 15px;">
+                       @include('velocity::layouts.top-nav.login-section')
+                   </div>
                 </div>
             </div>
         </div>

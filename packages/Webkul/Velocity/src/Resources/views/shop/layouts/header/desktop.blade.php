@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <sidebar-header heading= "{{ __('velocity::app.menu-navbar.text-category') }}">
 
         {{-- this is default content if js is not loaded --}}
@@ -9,7 +9,7 @@
         </div>
 
     </sidebar-header>
-</div>
+</div> -->
 
 <div class="content-list right">
     <right-side-header :header-content="{{ json_encode(app('Webkul\Velocity\Repositories\ContentRepository')->getAllContents()) }}">
